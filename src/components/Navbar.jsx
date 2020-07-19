@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react';
+
 import {
         AppBar,
         Toolbar,
@@ -7,6 +8,7 @@ import {
         ListItemText,
         ListItemIcon,
         Avatar,
+        Drawer,
         Divider,
         List,
         Typography,
@@ -14,6 +16,7 @@ import {
         } from '@material-ui/core';
 import {
         ArrowBack,
+        MenuOpen,
         AssignmentInd,
         Home,
         Apps,
@@ -32,10 +35,10 @@ const useStyles = makeStyles({
         backgroundColor: '#222',
         color: '#5dbcd2'
     },
-    menuIcons: {
+    menuItems: { 
         color: '#ff6347'
     },
-    arrow: {
+    hamburger: {
         color: '#ff6347'
     },
     headerText: {
@@ -47,7 +50,7 @@ const useStyles = makeStyles({
         backgroundColor: '#444444'
     },
     avatar: {
-        margin: '.5rem auto',
+        margin: '1rem auto',
         width: '5rem',
         height: '5rem'
     }
@@ -78,37 +81,64 @@ const menuItems = [
 export default function Navbar() {
 
     const classes = useStyles();
-    return (
-        <React.Fragment>
 
-        <Box className={classes.menuSlider} component="div" >
+    const [state, setState] = useState({
+        right: false
+    })
+
+    const toggleSlider = (slider, open) => () => {
+        setState({
+            ...state, 
+            [slider]: open
+        })
+    }
+
+    const SideList = slider => (
+
+        <Box 
+            className={classes.menuSlider} 
+            component="div" 
+            onClick={toggleSlider(slider, false)}
+            >
             <Avatar className={classes.avatar} src={Uranus} alt="Uranus" />
                 <Divider />
                     <List>
                         {/* Looping over list item icons array we defined above function */}
                         {menuItems.map((listItem, key) => (
-                        <ListItem className={classes.menuIcons} button key={key}>
-                            <ListItemIcon className={classes.menuIcons} >
+                        <ListItem className={classes.menuItems} button key={key}>
+                            <ListItemIcon className={classes.menuItems} >
                                 {listItem.listIcon}
                             </ListItemIcon>
-                            <ListItemText>
+                            <ListItemText >
                                 {listItem.listText}
                             </ListItemText>
                         </ListItem>
                         ))}
                     </List>
         </Box>
+    )
+    return (
+        <React.Fragment>
+
+        
 
         <Box component="nav" >
 
             <AppBar position="static" className={classes.root} >
                 <Toolbar>
-                    <IconButton>
-                        <ArrowBack className={classes.arrow}/>
+                    <IconButton onClick={toggleSlider('right', true)}>
+                        <MenuOpen className={classes.hamburger}/>
                     </IconButton>
                     <Typography className={classes.headerText} variant="h5">
-                        Portfolio
+                        Michael Stallings
                     </Typography>
+                    <Drawer
+                        anchor='right'
+                        open={state.right}
+                        onClose={toggleSlider('right', false)}
+                    >
+                        {SideList('right')}
+                    </Drawer>
                 </Toolbar>
             </AppBar>
 
