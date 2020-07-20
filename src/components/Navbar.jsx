@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import {
         AppBar,
         Toolbar,
@@ -15,8 +14,7 @@ import {
         Box
         } from '@material-ui/core';
 import {
-        ArrowBack,
-        MenuOpen,
+        FlightTakeoff,
         AssignmentInd,
         Home,
         Apps,
@@ -127,10 +125,10 @@ export default function Navbar() {
             <AppBar position="static" className={classes.root} >
                 <Toolbar>
                     <IconButton onClick={toggleSlider('right', true)}>
-                        <MenuOpen className={classes.hamburger}/>
+                        <FlightTakeoff className={classes.hamburger} />
                     </IconButton>
                     <Typography className={classes.headerText} variant="h5">
-                        Michael Stallings
+                        Portfolio
                     </Typography>
                     <Drawer
                         anchor='right'
