@@ -59,19 +59,23 @@ const useStyles = makeStyles({
 const menuItems = [
     {
         listIcon: <Home/>,
-        listText: 'Home'
+        listText: 'Home',
+        
     },
     {
         listIcon: <AssignmentInd/>,
-        listText: 'Resume'
+        listText: 'Resume',
+        
     },
     {
         listIcon: <Apps/>,
-        listText: 'Portfolio'
+        listText: 'Portfolio',
+        
     },
     {
         listIcon: <ContactMail/>,
-        listText: 'Cotact'
+        listText: 'Cotact',
+       
     }
 ]
 
@@ -103,7 +107,7 @@ export default function Navbar() {
                     <List>
                         {/* Looping over list item icons array we defined above function */}
                         {menuItems.map((listItem, key) => (
-                        <ListItem className={classes.menuItems} button key={key}>
+                        <ListItem className={classes.menuItems} button key={key} >
                             <ListItemIcon className={classes.menuItems} >
                                 {listItem.listIcon}
                             </ListItemIcon>
@@ -128,7 +132,7 @@ export default function Navbar() {
                         <FlightTakeoff className={classes.hamburger} />
                     </IconButton>
                     <Typography className={classes.headerText} variant="h5">
-                        Portfolio
+                    Personal Site - Portfolio
                     </Typography>
                     <Drawer
                         anchor='right'

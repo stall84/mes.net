@@ -13,7 +13,6 @@ import mesAvatar4 from '../images/mesAvatar4.jpg';
 
 const useStyles = makeStyles({
     mainContainer: {
-        opacity: .7,
         position: 'absolute',
         top: '50%',
         left: '50%',
