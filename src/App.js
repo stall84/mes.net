@@ -3,13 +3,15 @@ import { Route } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
 import Resume from './components/Resume';
+import Portfolio from './components/Portfolio';
 
 
 export default function App() {
     return (
     <React.Fragment>
        <Route exact path='/' component={Home} />
-       <Route path='/resume' component={Resume} />
+       <Route exact path='/resume' component={Resume} />
+       <Route exact path='/portfolio' component={Portfolio} /> 
     </React.Fragment>       
     )
 }

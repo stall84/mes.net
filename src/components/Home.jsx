@@ -34,7 +34,7 @@ export default function Home() {
                                 enable: true,
                                 value_area: 800
                             },
-                            value: 80
+                            value: 65
                         },
                         collisions: {
                             enable: true
@@ -54,7 +54,7 @@ export default function Home() {
                                 distance: 400,
                                 duration: 3,
                                 opacity: 0.7,
-                                size: 40
+                                size: 50
                             },
                             push: {
                                 quantity: 8
