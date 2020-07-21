@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
         AppBar,
         Toolbar,
@@ -60,16 +61,19 @@ const menuItems = [
     {
         listIcon: <Home/>,
         listText: 'Home',
+        listPath: '/'
         
     },
     {
         listIcon: <AssignmentInd/>,
         listText: 'Resume',
+        listPath: '/resume'
         
     },
     {
         listIcon: <Apps/>,
         listText: 'Portfolio',
+        
         
     },
     {
@@ -107,7 +111,7 @@ export default function Navbar() {
                     <List>
                         {/* Looping over list item icons array we defined above function */}
                         {menuItems.map((listItem, key) => (
-                        <ListItem className={classes.menuItems} button key={key} >
+                        <ListItem className={classes.menuItems} button key={key} component={Link} to={listItem.listPath} >
                             <ListItemIcon className={classes.menuItems} >
                                 {listItem.listIcon}
                             </ListItemIcon>
