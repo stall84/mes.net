@@ -1,25 +1,19 @@
 import React from 'react';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
-import { TextField, 
-         Typography,
-         Button,
-         Grid,
+
+import {
          Box 
         } from '@material-ui/core/';
-import SendIcon from '@material-ui/icons/Send';
+
         
 
 
 
-const useStyles = makeStyles((theme) => ({
-  
-  
-}));
+
 
 export default function FullWidthGrid() {
-  const classes = useStyles();
+  
 
   
   return (
