@@ -44,11 +44,11 @@ export default function Header() {
             <Avatar className={classes.avatar} src={mesAvatar4} title='MES in Marin' alt='Michael in Marin' />
 
                 <Typography className={classes.title} variant="h4">
-                    <Typed strings={['Michael E Stallings']} typeSpeed={50} showCursor={false} />
+                    <Typed strings={['Michael E Stallings']} typeSpeed={65} showCursor={false} />
                 </Typography>
 
                 <Typography className={classes.subTitle} variant="h5">
-                    <Typed loop strings={['Web Developer', 'MERN/SERN Stack', 'Astro/Aerophile']} typeSpeed={50} backSpeed={50} />
+                    <Typed loop strings={['Web Developer', 'MERN/SERN Stack', 'Astro/Aerophile']} typeSpeed={75} backSpeed={70} />
                 </Typography>
 
         </Box>
