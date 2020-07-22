@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 import {
         AppBar,
         Toolbar,
@@ -15,8 +15,7 @@ import {
         Box
         } from '@material-ui/core';
 import {
-        ArrowBack,
-        MenuOpen,
+        FlightTakeoff,
         AssignmentInd,
         Home,
         Apps,
@@ -61,19 +60,27 @@ const useStyles = makeStyles({
 const menuItems = [
     {
         listIcon: <Home/>,
-        listText: 'Home'
+        listText: 'Home',
+        listPath: '/'
+        
     },
     {
         listIcon: <AssignmentInd/>,
-        listText: 'Resume'
+        listText: 'Resume',
+        listPath: '/resume'
+        
     },
     {
         listIcon: <Apps/>,
-        listText: 'Portfolio'
+        listText: 'Portfolio',
+        listPath: '/portfolio'
+        
+        
     },
     {
         listIcon: <ContactMail/>,
-        listText: 'Cotact'
+        listText: 'Cotact',
+       
     }
 ]
 
@@ -105,7 +112,7 @@ export default function Navbar() {
                     <List>
                         {/* Looping over list item icons array we defined above function */}
                         {menuItems.map((listItem, key) => (
-                        <ListItem className={classes.menuItems} button key={key}>
+                        <ListItem className={classes.menuItems} button key={key} component={Link} to={listItem.listPath} >
                             <ListItemIcon className={classes.menuItems} >
                                 {listItem.listIcon}
                             </ListItemIcon>
@@ -127,10 +134,10 @@ export default function Navbar() {
             <AppBar position="static" className={classes.root} >
                 <Toolbar>
                     <IconButton onClick={toggleSlider('right', true)}>
-                        <MenuOpen className={classes.hamburger}/>
+                        <FlightTakeoff className={classes.hamburger} />
                     </IconButton>
                     <Typography className={classes.headerText} variant="h5">
-                        Michael Stallings
+                    Personal Site - Portfolio
                     </Typography>
                     <Drawer
                         anchor='right'
