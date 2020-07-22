@@ -68,8 +68,9 @@ export default function Home() {
                 }}
             >
 
-
+           
             </Particles>
+            
 
 
         </React.Fragment>
