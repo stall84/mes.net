@@ -79,7 +79,8 @@ const menuItems = [
     },
     {
         listIcon: <ContactMail/>,
-        listText: 'Cotact',
+        listText: 'Contact',
+        listPath: '/contact'
        
     }
 ]
