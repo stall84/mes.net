@@ -36,13 +36,13 @@ export default function Resume() {
           className={classes.gridHolder}
     >
         <Grid item xs={12} className={classes.root}>
-    <div className={classes.divHolder}>
+    
     <Iframe url='https://docs.google.com/document/d/1LNDPt-ChoBSPim4sfgZSE-nQ0oLP7t7ZpSgBOihvFu0/edit?usp=sharing'
-            width='600px'
+            width='680px'
             height='800px'
             id='resume'
             />
-     </div>
+     
         </Grid>
      </Grid>
      </React.Fragment>
