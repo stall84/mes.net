@@ -9,7 +9,15 @@ import Iframe from 'react-iframe';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginLeft: '20%',
+    marginLeft: '10%',
+  },
+  gridHolder: {
+    width: '100%',
+    backgroundColor: '#708090'
+  },
+  divHolder: {
+    
+    
   }
   
   
@@ -25,16 +33,16 @@ export default function Resume() {
     <Navbar />
 
     <Grid container justify='center'
+          className={classes.gridHolder}
     >
         <Grid item xs={12} className={classes.root}>
-    
+    <div className={classes.divHolder}>
     <Iframe url='https://docs.google.com/document/d/1LNDPt-ChoBSPim4sfgZSE-nQ0oLP7t7ZpSgBOihvFu0/edit?usp=sharing'
-            width='800px'
-            height='900px'
+            width='600px'
+            height='800px'
             id='resume'
-            display='iniitial'
             />
-     
+     </div>
         </Grid>
      </Grid>
      </React.Fragment>
