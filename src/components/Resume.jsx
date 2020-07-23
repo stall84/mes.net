@@ -9,11 +9,11 @@ import Iframe from 'react-iframe';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginLeft: '10%',
+    marginLeft: '25%',
   },
   gridHolder: {
     width: '100%',
-    backgroundColor: '#708090'
+    backgroundColor: 'white'
   },
   divHolder: {
     
