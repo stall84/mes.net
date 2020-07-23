@@ -32,12 +32,9 @@ export default function Home() {
                         number: {
                             density: {
                                 enable: true,
-                                value_area: 800
+                                value_area: 900
                             },
                             value: 65
-                        },
-                        collisions: {
-                            enable: true
                         }
                     },
                     interactivity: {
@@ -50,12 +47,6 @@ export default function Home() {
                             resize: true,
                         },
                         modes: {
-                            bubble: {
-                                distance: 400,
-                                duration: 3,
-                                opacity: 0.7,
-                                size: 50
-                            },
                             push: {
                                 quantity: 8
                             },
@@ -63,7 +54,35 @@ export default function Home() {
                                 distance: 300,
                                 duration: 0.7
                             }
-                        }
+                        },
+                        shape: {
+                            type: 'circle',
+                            stroke: {
+                                width: 5,
+                                color: 'tomato'
+                            }
+                        },
+                        size: {
+                            value: 8,
+                            random: true,
+                            animation: {
+                                enable: true,
+                                speed: 6,
+                                size_min: 0.2,
+                                sync: true
+                            }
+                        },
+                        opacity: {
+                            value: 1,
+                            random: true,
+                            anim: {
+                                enable: false,
+                                speed: 1,
+                                opacity_min: 0.1,
+                                sync: false
+                            }
+                        },
+                        fpsLimit: 60
                     }
                 }}
             >

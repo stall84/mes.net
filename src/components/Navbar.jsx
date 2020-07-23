@@ -44,7 +44,7 @@ const useStyles = makeStyles({
         color: '#ffffff'
     },
     menuSlider: {
-        width: '35vw',
+        width: '36vw',
         height: '100vh',
         backgroundColor: '#444444'
     },
