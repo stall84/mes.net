@@ -11,9 +11,9 @@ export default function App() {
     return (
     <React.Fragment>
        <Route exact path='/' component={Home} />
-       <Route path='/resume' component={Resume} />
-       <Route path='/portfolio' component={Portfolio} /> 
-       <Route path='/contact' component={Contact} />
+       <Route exact path='/resume' component={Resume} />
+       <Route exact path='/portfolio' component={Portfolio} /> 
+       <Route exact path='/contact' component={Contact} />
     </React.Fragment>       
     )
 }
