@@ -44,7 +44,8 @@ const useStyles = makeStyles({
         color: '#ffffff'
     },
     menuSlider: {
-        width: '36vw',
+        width: '18vw',
+        [`@media (max-width: 600px)`]: {width: '40vw'},
         height: '100vh',
         backgroundColor: '#444444'
     },
@@ -88,6 +89,7 @@ const menuItems = [
 
 export default function Navbar() {
 
+    
     const classes = useStyles();
 
     const [state, setState] = useState({

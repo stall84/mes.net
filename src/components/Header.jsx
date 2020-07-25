@@ -44,7 +44,7 @@ export default function Header() {
             <Avatar className={classes.avatar} src={mesAvatar4} title='MES in Marin' alt='Michael in Marin' />
 
                 <Typography className={classes.title} variant="h4">
-                    <Typed strings={['Michael E Stallings']} typeSpeed={65} showCursor={false} />
+                    <Typed strings={['Michael E Stallings']} typeSpeed={70} showCursor={false} />
                 </Typography>
 
                 <Typography className={classes.subTitle} variant="h5">
