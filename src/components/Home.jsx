@@ -10,6 +10,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
     particlesCanvas: {
+        opacity: .45,
         position: 'absolute'
     }
 })
@@ -32,9 +33,9 @@ export default function Home() {
                         number: {
                             density: {
                                 enable: true,
-                                value_area: 900
+                                value_area: 800
                             },
-                            value: 65
+                            value: 68
                         }
                     },
                     interactivity: {
@@ -51,14 +52,14 @@ export default function Home() {
                                 quantity: 8
                             },
                             repulse: {
-                                distance: 300,
-                                duration: 0.7
+                                distance: 200,
+                                duration: 0.9
                             }
                         },
                         shape: {
                             type: 'circle',
                             stroke: {
-                                width: 5,
+                                width: 10,
                                 color: 'tomato'
                             }
                         },
@@ -67,7 +68,7 @@ export default function Home() {
                             random: true,
                             animation: {
                                 enable: true,
-                                speed: 6,
+                                speed: 4,
                                 size_min: 0.2,
                                 sync: true
                             }
