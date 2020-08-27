@@ -40,9 +40,9 @@ export default function Header() {
           <Typed
             loop={false}
             strings={[
-              "Hello all, I'm a full-stack web-developer living in Atlanta, GA with a passion for all things big like the Hubble Deep-Field image forming my background, all things small like the electromagnetic-digital wonders that compile this page, and all things in between. I've been lucky to deeply-pursue my passion in Aviation, Business, and am currently embarking on a new journey into Web/Software Development. What I do know, I try to do to the best of my ability. What I don't know, I always strive to learn.",
+              "Full-stack web-developer in Atlanta, GA. Passion for all things big, like the Hubble Deep-Field background image. Curiosity in all things small, like the electromagnetic processes that build this page. What I do know, I try to do best, What I don't, I strive to learn.",
             ]}
-            typeSpeed={48}
+            typeSpeed={45}
           />
         </Typography>
       </Box>
@@ -72,7 +72,7 @@ const useStyles = makeStyles({
     color: "tan",
   },
   aboutSubTitle: {
-    marginTop: "2rem",
-    color: "#d2a38c",
+    marginTop: "1.2rem",
+    color: "#cba87a",
   },
 });
