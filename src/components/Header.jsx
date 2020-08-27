@@ -40,9 +40,9 @@ export default function Header() {
           <Typed
             loop={false}
             strings={[
-              "Full-stack web-developer in Atlanta, GA. Passion for all things big, like the Hubble Deep-Field background image. Curiosity in all things small, like the electromagnetic processes that build this page. What I do know, I try to do best, What I don't, I strive to learn.",
+              "Full-stack web-developer in Atlanta, GA. Passion for all things big, like the Hubble Deep-Field background image here. Curiosity in all things small, like the electromagnetic and digital processes that build this page. What I do know, I try to do best, What I don't, I strive to learn.",
             ]}
-            typeSpeed={45}
+            typeSpeed={30}
           />
         </Typography>
       </Box>
