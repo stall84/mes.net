@@ -27,7 +27,7 @@ export default function Home() {
                 enable: true,
                 value_area: 800,
               },
-              value: 68,
+              value: 100,
             },
           },
           interactivity: {
