@@ -11,58 +11,52 @@ export default function Header() {
 
   return (
     <React.Fragment>
-      <a
-        href="https://www.linkedin.com/in/michael-stallings-b3368618/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Box className={classes.mainContainer}>
-          <Avatar
-            className={classes.avatar}
-            src={mesAvatar4}
-            title="MES in Marin"
-            alt="Michael in Marin"
+      <Box className={classes.mainContainer}>
+        <Avatar
+          className={classes.avatar}
+          src={mesAvatar4}
+          title="MES in Marin"
+          alt="Michael in Marin"
+        />
+
+        <Typography className={classes.title} variant="h4">
+          <Typed
+            strings={["Michael Stallings"]}
+            typeSpeed={70}
+            showCursor={false}
           />
+        </Typography>
 
-          <Typography className={classes.title} variant="h4">
-            <Typed
-              strings={["Michael E Stallings"]}
-              typeSpeed={70}
-              showCursor={false}
-            />
-          </Typography>
+        <Typography className={classes.subTitle} variant="h5">
+          <Typed
+            loop
+            strings={[
+              "Web Developer",
+              "MERN/SERN Stack",
+              "ES6-Javascript",
+              "Web-API Architecture",
+              "ReactJS",
+              "React Native",
+              "SQL/NoSQL",
+              ".NET/C#",
+              "Astronomy/Astrophotography",
+              "Aviation",
+            ]}
+            typeSpeed={60}
+            backSpeed={60}
+          />
+        </Typography>
 
-          <Typography className={classes.subTitle} variant="h5">
-            <Typed
-              loop
-              strings={[
-                "Web Developer",
-                "MERN/SERN Stack",
-                "Javascript",
-                "API Architecture",
-                "React",
-                "React Native",
-                "SQL/NoSQL",
-                ".NET/C#",
-                "Astronomy/Astrophotography",
-                "Aviation",
-              ]}
-              typeSpeed={60}
-              backSpeed={60}
-            />
-          </Typography>
-
-          <Typography className={classes.aboutSubTitle} variant="h5">
-            <Typed
-              loop={false}
-              strings={[
-                "Full stack web / software developer in Atlanta. Passion for all things big, like the Hubble Deep-Field image here. Curiosity in all things small, like the electromagnetic processes that render this site. What I know, I try to apply best, What I don't, I long to learn.",
-              ]}
-              typeSpeed={30}
-            />
-          </Typography>
-        </Box>
-      </a>
+        <Typography className={classes.aboutSubTitle} variant="h6">
+          <Typed
+            loop={false}
+            strings={[
+              "Web/software developer in Atlanta, GA. Passion for all things grand, like this Hubble deep-field background image. Curios of all things fundamental, like electromagnetism and Boolean logic wielded to make like sites. What I know, I apply best. What I don't yet know, I long to understand.",
+            ]}
+            typeSpeed={30}
+          />
+        </Typography>
+      </Box>
     </React.Fragment>
   );
 }
@@ -83,13 +77,17 @@ const useStyles = makeStyles({
     margin: "0 auto",
   },
   title: {
-    color: "#ff6347",
+    color: "#f50057",
+    textShadow: "0 0 1px white",
   },
   subTitle: {
     color: "tan",
   },
   aboutSubTitle: {
     marginTop: "1.2rem",
-    color: "#f2efec",
+    marginLeft: "1.65rem",
+    marginRight: "1.65rem",
+    textShadow: "1px 1px 1px black",
+    color: "tan",
   },
 });
