@@ -2,6 +2,7 @@ import React from "react";
 import { Typography, Avatar, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Typed from "react-typed";
+import MediaQuery from "react-responsive";
 import mesAvatar4 from "../images/mesAvatar4.jpg";
 
 // Define Styles using Material UI's makeStyles Hook
@@ -46,16 +47,28 @@ export default function Header() {
             backSpeed={60}
           />
         </Typography>
-
-        <Typography className={classes.aboutSubTitle} variant="h6">
-          <Typed
-            loop={false}
-            strings={[
-              "Web/software developer in Atlanta, GA. Passion for all things grand, like this Hubble deep-field background image. Curios of all things fundamental, like electromagnetism and Boolean logic wielded to make like sites. What I know, I apply best. What I don't yet know, I long to understand.",
-            ]}
-            typeSpeed={30}
-          />
-        </Typography>
+        <MediaQuery minDeviceWidth={1200}>
+          <Typography className={classes.aboutSubTitle} variant="h6">
+            <Typed
+              loop={false}
+              strings={[
+                "Web/software developer - Atlanta, GA. Possessing passion for all things grand, like the Hubble deep-field image here. Catering curiosity of all things fundamental in nature, like the analog and digital processes we wield to create websites like this. What I do know, I try to apply best. What I don't yet know, I long to one day.",
+              ]}
+              typeSpeed={20}
+            />
+          </Typography>
+        </MediaQuery>
+        <MediaQuery maxDeviceWidth={1200}>
+          <Typography className={classes.aboutSubTitle} variant="h8">
+            <Typed
+              loop={false}
+              strings={[
+                "Web/software developer - Atlanta, GA. Possessing passion for all things grand, like the Hubble deep-field image here. Catering curiosity of all things fundamental in nature, like the analog and digital processes we wield to create websites like this. What I do know, I try to apply best. What I don't yet know, I long to one day.",
+              ]}
+              typeSpeed={20}
+            />
+          </Typography>
+        </MediaQuery>
       </Box>
     </React.Fragment>
   );
@@ -87,7 +100,8 @@ const useStyles = makeStyles({
     marginTop: "1.2rem",
     marginLeft: "1.65rem",
     marginRight: "1.65rem",
-    textShadow: "1px 1px 1px black",
-    color: "tan",
+    textShadow:
+      "1px 1px 4px rgba(255, 0, 0, 0.95), -1px -1px 4px rgba(0, 191, 255, 0.95)",
+    color: "white",
   },
 });

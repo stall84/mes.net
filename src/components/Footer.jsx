@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Tooltip } from "@material-ui/core";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
+import styled from "styled-components";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
@@ -11,19 +12,37 @@ const useStyles = makeStyles({
     justifyContent: "center",
     width: "100vw",
     bottom: 0,
-    height: "2.5rem",
+    height: "3.5rem",
     fontSize: 70,
+  },
+  icons: {
+    fontSize: 60,
   },
 });
 
 const CustomTooltip = withStyles((theme) => ({
   tooltip: {
-    backgroundColor: "#fff5f9",
+    backgroundColor: "rgba(255, 255, 255, 0.75)",
     color: "#f50057",
     boxShadow: theme.shadows[1],
     fontSize: 16,
   },
 }))(Tooltip);
+
+const IconContainer = styled.div`
+  display: flex;
+  margin: ${(props) => (props.primary ? "0 20px 0 0" : "0 0 0 20px")};
+  padding: 20;
+  justify-content: center;
+  align-items: center;
+  width: ${(props) => (props.primary ? "64px" : "52px")};
+  height: ${(props) => (props.primary ? "64px" : "52px")};
+  border-radius: ${(props) => (props.primary ? "50%" : "10px")};
+  background: inherit;
+  :hover {
+    background: rgba(255, 255, 255, 0.75);
+  }
+`;
 
 export default function Footer() {
   const classes = useStyles();
@@ -36,10 +55,9 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <GitHubIcon
-            style={{ fontSize: 60, paddingRight: 20 }}
-            color="secondary"
-          />
+          <IconContainer primary>
+            <GitHubIcon className={classes.icons} color="secondary" />
+          </IconContainer>
         </a>
       </CustomTooltip>
       <CustomTooltip title="My LinkedIn">
@@ -48,10 +66,9 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <LinkedInIcon
-            style={{ fontSize: 60, paddingLeft: 20 }}
-            color="secondary"
-          />
+          <IconContainer>
+            <LinkedInIcon className={classes.icons} color="secondary" />
+          </IconContainer>
         </a>
       </CustomTooltip>
     </Grid>
