@@ -2,6 +2,7 @@ import React from "react";
 import { Typography, Avatar, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Typed from "react-typed";
+import MediaQuery from "react-responsive";
 import mesAvatar4 from "../images/mesAvatar4.jpg";
 
 // Define Styles using Material UI's makeStyles Hook
@@ -11,58 +12,64 @@ export default function Header() {
 
   return (
     <React.Fragment>
-      <a
-        href="https://www.linkedin.com/in/michael-stallings-b3368618/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Box className={classes.mainContainer}>
-          <Avatar
-            className={classes.avatar}
-            src={mesAvatar4}
-            title="MES in Marin"
-            alt="Michael in Marin"
+      <Box className={classes.mainContainer}>
+        <Avatar
+          className={classes.avatar}
+          src={mesAvatar4}
+          title="MES in Marin"
+          alt="Michael in Marin"
+        />
+
+        <Typography className={classes.title} variant="h4">
+          <Typed
+            strings={["Michael Stallings"]}
+            typeSpeed={70}
+            showCursor={false}
           />
+        </Typography>
 
-          <Typography className={classes.title} variant="h4">
-            <Typed
-              strings={["Michael E Stallings"]}
-              typeSpeed={70}
-              showCursor={false}
-            />
-          </Typography>
-
-          <Typography className={classes.subTitle} variant="h5">
-            <Typed
-              loop
-              strings={[
-                "Web Developer",
-                "MERN/SERN Stack",
-                "Javascript",
-                "API Architecture",
-                "React",
-                "React Native",
-                "SQL/NoSQL",
-                ".NET/C#",
-                "Astronomy/Astrophotography",
-                "Aviation",
-              ]}
-              typeSpeed={60}
-              backSpeed={60}
-            />
-          </Typography>
-
-          <Typography className={classes.aboutSubTitle} variant="h5">
+        <Typography className={classes.subTitle} variant="h5">
+          <Typed
+            loop
+            strings={[
+              "Web Developer",
+              "MERN/SERN Stack",
+              "ES6-Javascript",
+              "Web-API Architecture",
+              "ReactJS",
+              "React Native",
+              "SQL/NoSQL",
+              ".NET/C#",
+              "Astronomy/Astrophotography",
+              "Aviation",
+            ]}
+            typeSpeed={60}
+            backSpeed={60}
+          />
+        </Typography>
+        <MediaQuery minDeviceWidth={1200}>
+          <Typography className={classes.aboutSubTitle} variant="h6">
             <Typed
               loop={false}
               strings={[
-                "Full stack web / software developer in Atlanta. Passion for all things big, like the Hubble Deep-Field image here. Curiosity in all things small, like the electromagnetic processes that render this site. What I know, I try to apply best, What I don't, I long to learn.",
+                "Web/software developer - Atlanta, GA. Possessing passion for all things grand, like the Hubble deep-field image here. Catering curiosity of all things fundamental in nature, like the analog and digital processes we wield to create websites like this. What I do know, I try to apply best. What I don't yet know, I long to one day.",
               ]}
-              typeSpeed={30}
+              typeSpeed={20}
             />
           </Typography>
-        </Box>
-      </a>
+        </MediaQuery>
+        <MediaQuery maxDeviceWidth={1200}>
+          <Typography className={classes.aboutSubTitle} variant="h8">
+            <Typed
+              loop={false}
+              strings={[
+                "Web/software developer - Atlanta, GA. Possessing passion for all things grand, like the Hubble deep-field image here. Catering curiosity of all things fundamental in nature, like the analog and digital processes we wield to create websites like this. What I do know, I try to apply best. What I don't yet know, I long to one day.",
+              ]}
+              typeSpeed={20}
+            />
+          </Typography>
+        </MediaQuery>
+      </Box>
     </React.Fragment>
   );
 }
@@ -83,13 +90,18 @@ const useStyles = makeStyles({
     margin: "0 auto",
   },
   title: {
-    color: "#ff6347",
+    color: "#f50057",
+    textShadow: "0 0 1px white",
   },
   subTitle: {
     color: "tan",
   },
   aboutSubTitle: {
     marginTop: "1.2rem",
-    color: "#f2efec",
+    marginLeft: "1.65rem",
+    marginRight: "1.65rem",
+    textShadow:
+      "1px 1px 4px rgba(255, 0, 0, 0.95), -1px -1px 4px rgba(0, 191, 255, 0.95)",
+    color: "white",
   },
 });

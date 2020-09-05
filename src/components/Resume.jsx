@@ -1,8 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
-import { Button } from "@material-ui/core";
+import { Button, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid } from "@material-ui/core/";
 import PDF from "../docs/MichaelStallingsResume.pdf";
 import DevIcon from "devicon-react-svg";
 

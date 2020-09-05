@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Header from "./Header";
+import Footer from "./Footer";
 import Particles from "react-particles-js";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -25,9 +26,9 @@ export default function Home() {
             number: {
               density: {
                 enable: true,
-                value_area: 800,
+                value_area: 700,
               },
-              value: 100,
+              value: 65,
             },
           },
           interactivity: {
@@ -41,17 +42,17 @@ export default function Home() {
             },
             modes: {
               push: {
-                quantity: 8,
+                quantity: 10,
               },
               repulse: {
-                distance: 200,
-                duration: 0.9,
+                distance: 92,
+                duration: 2.5,
               },
             },
             shape: {
               type: "circle",
               stroke: {
-                width: 10,
+                width: 60,
                 color: "tomato",
               },
             },
@@ -61,17 +62,17 @@ export default function Home() {
               animation: {
                 enable: true,
                 speed: 4,
-                size_min: 0.2,
+                size_min: 2,
                 sync: true,
               },
             },
             opacity: {
-              value: 1,
+              value: 10,
               random: true,
               anim: {
-                enable: false,
-                speed: 1,
-                opacity_min: 0.1,
+                enable: true,
+                speed: 5,
+                opacity_min: 5,
                 sync: false,
               },
             },
@@ -79,6 +80,7 @@ export default function Home() {
           },
         }}
       ></Particles>
+      <Footer />
     </React.Fragment>
   );
 }
