@@ -32,10 +32,11 @@ const useStyles = makeStyles({
     color: "#5dbcd2",
   },
   menuItems: {
-    color: "#ff6347",
+    color: "#f50057",
+    textShadow: "0 0 .1px white",
   },
   hamburger: {
-    color: "#ff6347",
+    color: "#f50057",
   },
   headerText: {
     color: "#ffffff",
