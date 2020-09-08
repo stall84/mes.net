@@ -3,33 +3,29 @@ import Navbar from "./Navbar";
 import { Button, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import PDF from "../docs/MichaelStallingsResume.pdf";
-import DevIcon from "devicon-react-svg";
+import Particles from "react-particles-js";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     textAlign: "center",
     marginTop: "20vh",
   },
-  gridHolder: {
-    width: "100%",
-  },
   a: {
     textDecoration: "none",
+  },
+  gridHolder: {
+    width: "100%",
   },
   button: {
     textDecoration: "none",
     backgroundColor: "tomato",
     color: "white",
   },
-  techHolder: {
-    marginTop: "100px",
+  particlesCanvas: {
+    opacity: 0.45,
+    position: "absolute",
   },
 }));
-
-const devIconStyle = {
-  fill: "white",
-  width: "85px",
-};
 
 export default function Resume() {
   const classes = useStyles();
@@ -46,120 +42,71 @@ export default function Resume() {
             href={PDF}
             target="_blank"
           >
-            {" "}
-            <Button className={classes.button}> Open Resume PDF </Button>
+            <Button className={classes.button}> Open PDF Resume </Button>
           </a>
-
-          <Grid container justify="center">
-            <Grid
-              item
-              xs={12}
-              md={4}
-              justify="center"
-              className={classes.techHolder}
-            >
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <DevIcon icon="javascript" style={devIconStyle} />
-              </a>
-              <a
-                href="https://reactjs.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {" "}
-                <DevIcon icon="react" style={devIconStyle} />{" "}
-              </a>
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <DevIcon icon="html5" style={devIconStyle} />
-              </a>
-              <a
-                href="https://nodejs.org/en/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {" "}
-                <DevIcon icon="nodejs" style={devIconStyle} />
-              </a>
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Glossary/CSS"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <DevIcon icon="css3" style={devIconStyle} />
-              </a>
-              <a
-                href="https://www.postgresql.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <DevIcon icon="postgresql" style={devIconStyle} />
-              </a>
-              <a
-                href="https://www.mysql.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <DevIcon icon="mysql" style={devIconStyle} />
-              </a>
-              <a
-                href="https://www.mongodb.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <DevIcon icon="mongodb" style={devIconStyle} />
-              </a>
-              <a
-                href="https://git-scm.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {" "}
-                <DevIcon icon="git" style={devIconStyle} />
-              </a>
-              <a
-                href="https://dotnet.microsoft.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {" "}
-                <DevIcon icon="dotnet" style={devIconStyle} />
-              </a>
-              <a
-                href="https://www.docker.com//"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {" "}
-                <DevIcon icon="docker" style={devIconStyle} />
-              </a>
-              <a
-                href="https://www.npmjs.com//"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {" "}
-                <DevIcon icon="npm" style={devIconStyle} />
-              </a>
-              <a
-                href="https://en.wikipedia.org/wiki/Responsive_web_design/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {" "}
-                <DevIcon icon="responsive" style={devIconStyle} />
-              </a>
-            </Grid>
-          </Grid>
         </Grid>
       </Grid>
+      <Particles
+        canvasClassName={classes.particlesCanvas}
+        params={{
+          particles: {
+            number: {
+              density: {
+                enable: true,
+                value_area: 700,
+              },
+              value: 65,
+            },
+          },
+          interactivity: {
+            detectsOn: "canvas",
+            events: {
+              onHover: {
+                enable: true,
+                mode: "repulse",
+              },
+              resize: true,
+            },
+            modes: {
+              push: {
+                quantity: 10,
+              },
+              repulse: {
+                distance: 92,
+                duration: 2.5,
+              },
+            },
+            shape: {
+              type: "circle",
+              stroke: {
+                width: 60,
+                color: "tomato",
+              },
+            },
+            size: {
+              value: 8,
+              random: true,
+              animation: {
+                enable: true,
+                speed: 4,
+                size_min: 2,
+                sync: true,
+              },
+            },
+            opacity: {
+              value: 10,
+              random: true,
+              anim: {
+                enable: true,
+                speed: 5,
+                opacity_min: 5,
+                sync: false,
+              },
+            },
+            fpsLimit: 60,
+          },
+        }}
+      ></Particles>
     </React.Fragment>
   );
 }

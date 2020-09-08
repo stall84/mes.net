@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     justifyContent: "center",
     width: "100vw",
     bottom: 0,
-    height: "3.5rem",
+    height: "5.5rem",
     fontSize: 70,
   },
   icons: {
