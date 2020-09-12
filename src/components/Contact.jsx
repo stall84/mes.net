@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import Particles from "react-particles-js";
 import { Box } from "@material-ui/core/";
@@ -90,6 +91,7 @@ export default function FullWidthGrid() {
           },
         }}
       ></Particles>
+      <Footer />
     </React.Fragment>
   );
 }
