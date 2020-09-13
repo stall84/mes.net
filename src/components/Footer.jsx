@@ -8,7 +8,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 const useStyles = makeStyles({
   root: {
     display: "flex",
-    position: "absolute",
+    position: "fixed",
     justifyContent: "center",
     width: "100vw",
     bottom: 0,
