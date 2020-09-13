@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Button, Grid, Tooltip } from "@material-ui/core";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
+import MediaQuery from "react-responsive";
 import PDF from "../docs/MichaelStallingsResume.pdf";
 import Particles from "react-particles-js";
 import aspLogo from "../images/icons/asp-log.png";
@@ -46,9 +47,15 @@ const useStyles = makeStyles((theme) => ({
   logoContainer: {
     marginTop: "4rem",
     position: "absolute",
+    textAlign: "center",
   },
   iconLogo: {
     padding: "0.5rem",
+  },
+  smallIconLogo: {
+    padding: "0.5rem",
+    width: "45px",
+    height: "45px",
   },
 }));
 
@@ -57,8 +64,7 @@ const PdfButton = (props) => {
   return (
     <CustomTooltip title="My Current Resume">
       <Button {...props} className={classes.button} href={PDF}>
-        {" "}
-        Open PDF Resume{" "}
+        Open PDF Resume
       </Button>
     </CustomTooltip>
   );
@@ -67,11 +73,40 @@ const PdfButton = (props) => {
 const Icon = (props) => {
   const classes = useStyles();
   return (
-    <CustomTooltip title={props.title}>
-      <a {...props} href={props.href} target="_blank" rel="noopener noreferrer">
-        <img src={props.icon} alt={props.alt} className={classes.iconLogo} />
-      </a>
-    </CustomTooltip>
+    <React.Fragment>
+      <MediaQuery minDeviceWidth={1200}>
+        <CustomTooltip title={props.title}>
+          <a
+            {...props}
+            href={props.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={props.icon}
+              alt={props.alt}
+              className={classes.iconLogo}
+            />
+          </a>
+        </CustomTooltip>
+      </MediaQuery>
+      <MediaQuery maxDeviceWidth={1200}>
+        <CustomTooltip title={props.title}>
+          <a
+            {...props}
+            href={props.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={props.icon}
+              alt={props.alt}
+              className={classes.smallIconLogo}
+            />
+          </a>
+        </CustomTooltip>
+      </MediaQuery>
+    </React.Fragment>
   );
 };
 
