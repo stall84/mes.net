@@ -53,9 +53,9 @@ const useStyles = makeStyles((theme) => ({
     padding: "0.5rem",
   },
   smallIconLogo: {
-    padding: "0.5rem",
-    width: "45px",
-    height: "45px",
+    padding: "0.25rem",
+    width: "52px",
+    height: "52px",
   },
 }));
 

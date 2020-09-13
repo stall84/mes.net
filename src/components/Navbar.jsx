@@ -19,7 +19,7 @@ import {
   AssignmentInd,
   Home,
   Apps,
-  ContactMail,
+  //ContactMail,
 } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/styles";
 import Uranus from "../images/uranus3.png";
@@ -72,11 +72,11 @@ const menuItems = [
     listText: "Portfolio",
     listPath: "/portfolio",
   },
-  {
-    listIcon: <ContactMail />,
-    listText: "Contact",
-    listPath: "/contact",
-  },
+  // {
+  //   listIcon: <ContactMail />,
+  //   listText: "Contact",
+  //   listPath: "/contact",
+  // },
 ];
 
 export default function Navbar() {
