@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
 import { Button, Grid, Tooltip } from "@material-ui/core";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import MediaQuery from "react-responsive";
@@ -346,7 +345,6 @@ export default function Resume() {
           />
         </Grid>
       </Grid>
-      <Footer />
     </React.Fragment>
   );
 }
