@@ -15,6 +15,7 @@ import {
 import ClearDarkSky from "../images/ClearDarkSky.png";
 import GymTanLaundry from "../images/GTL.png";
 import BeachMe from "../images/BeachMe.png";
+import isIFR from "../images/isIFR.png";
 import Particles from "react-particles-js";
 
 const useStyles = makeStyles({
@@ -102,6 +103,65 @@ export default function Portfolio() {
       <Box component="div" className={classes.mainContainer}>
         <Grid container justify="center" alignItems="center">
           <Grid item xs={12} sm={8} md={8}>
+            <Card className={classes.cardContainer} raised={true}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  alt="isIFR"
+                  height="200"
+                  image={isIFR}
+                />
+
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    isIFR? - ASP.NET MVC Single Page Application displaying
+                    METAR and Flight Rules
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Proof of concept application I created for my first/oldest
+                    passion: Aviation. Created in ASP.NET Core MVC 3.1, this
+                    server-side-rendered web-application does one thing very
+                    well: Quickly taking the user's airport code (with
+                    validation I added) entry, and returning a simple, yet
+                    informative display of the airport's current flight-rules:
+                    VFR (yay!), MVFR, or IFR (ick!). The raw METAR readout is
+                    also rendered for a more detailed weather situation for the
+                    pilot/user. Built with ASP.NET's required C# language, the
+                    Razor views include Bootstrap responsive styling, and a
+                    placeholder for future front-end improvement through Vue.JS
+                    framework. Using a few class models, a single controller,
+                    and a single view, this app is streamlined, yet capable and
+                    scalable. Currently calls the external AVWX REST API, and is
+                    deployed on Microsoft's Azure cloud services.
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button
+                    size="small"
+                    color="primary"
+                    onClick={(event) =>
+                      window.open("https://github.com/stall84/isIFR", "_blank")
+                    }
+                  >
+                    Code Repository
+                  </Button>
+
+                  <Button
+                    size="small"
+                    color="primary"
+                    onClick={(event) =>
+                      window.open("https://isifr.azurewebsites.net/", "_blank")
+                    }
+                  >
+                    Live Site
+                  </Button>
+                </CardActions>
+              </CardActionArea>
+            </Card>
             <Card className={classes.cardContainer} raised={true}>
               <CardActionArea>
                 <CardMedia
