@@ -136,7 +136,9 @@ export default function Portfolio() {
                     framework. Using a few class models, a single controller,
                     and a single view, this app is streamlined, yet capable and
                     scalable. Currently calls the external AVWX REST API, and is
-                    deployed on Microsoft's Azure cloud services.
+                    deployed on Microsoft's Azure cloud services. Front-End templated 
+                    and styled with Vue.js utilizing Vue's convenient 'drop-in' approach 
+                    
                   </Typography>
                 </CardContent>
                 <CardActions>
@@ -186,9 +188,9 @@ export default function Portfolio() {
                     weather forecasts for them in one single app. This is a
                     full-stack project with the front-end client build in React
                     with Redux state management. The client communicates via a
-                    seperately hosted Express back-end server with a MongoDB
-                    database storing hundreds of beaches. I really learned a LOT
-                    about fullstack building in month I spent building BeachMe.
+                    seperately hosted Express back-end server with a Node.js self-styled web-API interfacing with a MongoDB
+                    database storing hundreds of beaches, as well as Google and OpenWeatherMap's external API's. I really learned a LOT
+                    about fullstack architecture in month I spent building BeachMe.
                     Originally it was a front-end only React app, but I decided
                     to refactor all of the logic and external API calls to the
                     Express server leaving the client as 'dumb' as possible. I'm

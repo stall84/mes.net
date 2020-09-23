@@ -62,7 +62,7 @@ export default function Footer() {
       </CustomTooltip>
       <CustomTooltip title="My LinkedIn">
         <a
-          href="https://www.linkedin.com/in/michael-stallings-b3368618/"
+          href="https://www.linkedin.com/in/michael-stallings-web/"
           target="_blank"
           rel="noopener noreferrer"
         >
