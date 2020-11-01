@@ -16,7 +16,6 @@ import jsLogo from "../images/icons/js-log.png";
 import materialLogo from "../images/icons/materialui-log.png";
 import mongoLogo from "../images/icons/mongodb-log.png";
 import nodeLogo from "../images/icons/nodejs-log.png";
-import npmLogo from "../images/icons/npm-log.png";
 import postgresLogo from "../images/icons/postgres-log.png";
 import reactLogo from "../images/icons/react-log.png";
 import reactNativeLogo from "../images/icons/reactnative-log.png";
@@ -29,6 +28,10 @@ import azureLogo from "../images/icons/azure-log.png";
 import herokuLogo from "../images/icons/heroku-log.png";
 import sqlLogo from "../images/icons/sql-log.png";
 import sprintLogo from "../images/icons/sprint-log.png";
+import graphql from "../images/icons/graphql-log.png"
+import aws from "../images/icons/aws-log.png"
+import python from "../images/icons/python-log.png"
+import vue from "../images/icons/vue-log.png"
 
 const useStyles = makeStyles((theme) => ({
   buttonGrid: {
@@ -248,22 +251,28 @@ export default function Resume() {
             alt="reactNativeLogo"
           />
           <Icon
+            title="VueJS"
+            href="https://vuejs.org/"
+            icon={vue}
+            alt="Vue_Logo"
+          />
+          <Icon
             title="NodeJS"
             href="https://nodejs.org/en/"
             icon={nodeLogo}
             alt="nodeLogo"
           />
           <Icon
-            title="NPM"
-            href="https://www.npmjs.com/"
-            icon={npmLogo}
-            alt="npmLogo"
-          />
-          <Icon
             title="ASP.NET"
             href="https://dotnet.microsoft.com/apps/aspnet"
             icon={aspLogo}
             alt="aspLogo"
+          />
+          <Icon
+            title="Python"
+            href="https://www.python.org/"
+            icon={python}
+            alt="Python"
           />
           <Icon
             title="C Sharp"
@@ -326,10 +335,22 @@ export default function Resume() {
             alt="sqlLogo"
           />
           <Icon
+            title="GraphQL"
+            href="https://graphql.org/"
+            icon={graphql}
+            alt="graphQlLogo"
+          />
+          <Icon
             title="Heroku Deployment"
             href="https://www.heroku.com/home"
             icon={herokuLogo}
             alt="herokuLogo"
+          />
+          <Icon
+            title="Amazon Web Services"
+            href="https://aws.amazon.com"
+            icon={aws}
+            alt="AWS_Logo"
           />
           <Icon
             title="Azure Cloud Deployment"
