@@ -14,7 +14,7 @@ import {
 } from "@material-ui/core";
 import ClearDarkSky from "../images/ClearDarkSky.png";
 import GymTanLaundry from "../images/GTL.png";
-import BeachMe from "../images/BeachMe.png";
+import BeachMe from "../images/beach-me-1100.jpg";
 import isIFR from "../images/isIFR.png";
 import Particles from "react-particles-js";
 
@@ -103,6 +103,116 @@ export default function Portfolio() {
       <Box component="div" className={classes.mainContainer}>
         <Grid container justify="center" alignItems="center">
           <Grid item xs={12} sm={8} md={8}>
+          <Card className={classes.cardContainer} raised={true}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  alt="BeachMe"
+                  height="260"
+                  image={BeachMe}
+                />
+
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    Beach-Me! - Find the closest beaches along with weather
+                    forecasts
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Update: v3 Live:  I decided to take the entire project offline for a complete overhaul and restyle.
+                    I converted all of my component classes over to React functional components using Hooks where needed. However the 
+                    vast majority of the state management is handled by Redux again, this time using React-Redux Hooks.  This refactor 
+                    led to a major reduction in the total codebase along with making future alterations much simpler. The 2nd and maybe most apprciable of the 
+                    overhaul-changes was to the styling. Admittedly when I published the original version, my focus was mainly on the un-seen parts of
+                    a full-stack application. So building the backend API and orgainzing the front and back end's communication was far more important than it was
+                    on the user's experience. In Version 3 I took my new found CSS skills including utilizing variables, theming, and functions, along with more in-depth understanding
+                    of responsive styling and applied them. V3 utilizes CSS Modules for the individual components and a 'main' stylesheet containing all of the color theming
+                    and font theming.  Lastly, for V3. I decided to NOT use Create React App, opting instead for the much-more tedious manual WebPack bundling/compilation. 
+                    I spent a great deal of the rebuild time on learning the ins-and-outs of Web Pack, how to build custom configurations for production and development, and the many
+                    ways of code-splitting and other optimizations a manual-bundle with Web Pack offers. Quite a rewarding experience all-in-all. 
+                    <br />
+                    Original: 
+                    My solo capstone project. The idea came out of necessity,
+                    finding myself wanting to find the closest beaches with
+                    weather forecasts for them in one single app. This is a
+                    full-stack project with the front-end client build in React
+                    with Redux state management. The client communicates via a
+                    seperately hosted Express back-end server with a Node.js self-styled web-API interfacing with a MongoDB
+                    database storing hundreds of beaches, as well as Google and OpenWeatherMap's external API's. I really learned a LOT
+                    about fullstack architecture in month I spent building BeachMe.
+                    Originally it was a front-end only React app, but I decided
+                    to refactor all of the logic and external API calls to the
+                    Express server leaving the client as 'dumb' as possible. I'm
+                    quite proud at the final outcome, and it has the ability to
+                    be scaled to feature new options like finding lodging.
+                    Recently 'ported' to a React-Native coded App.
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button
+                    size="small"
+                    color="primary"
+                    onClick={(event) =>
+                      window.open(
+                        "https://github.com/stall84/V3-Beach-Me",
+                        "_blank"
+                      )
+                    }
+                  >
+                    Client Code
+                  </Button>
+                  <Button
+                    size="small"
+                    color="primary"
+                    onClick={(event) =>
+                      window.open(
+                        "https://github.com/stall84/Beach-Me-Backend",
+                        "_blank"
+                      )
+                    }
+                  >
+                    Server Code
+                  </Button>
+                  <Button
+                    size="small"
+                    color="primary"
+                    onClick={(event) =>
+                      window.open("https://beach-me.app/", "_blank")
+                    }
+                  >
+                    Live Site
+                  </Button>
+                  <Button
+                    size="small"
+                    color="primary"
+                    onClick={(event) =>
+                      window.open(
+                        "https://github.com/stall84/Beach_Me_NativeApp/",
+                        "_blank"
+                      )
+                    }
+                  >
+                    React-Native Code
+                  </Button>
+                  <Button
+                    size="small"
+                    color="primary"
+                    onClick={(event) =>
+                      window.open(
+                        "https://expo.io/@stall84/Beach_Me_App_exp/",
+                        "_blank"
+                      )
+                    }
+                  >
+                    React-Native App (Requires Expo-Client)
+                  </Button>
+                </CardActions>
+              </CardActionArea>
+            </Card>
+
             <Card className={classes.cardContainer} raised={true}>
               <CardActionArea>
                 <CardMedia
@@ -164,102 +274,7 @@ export default function Portfolio() {
                 </CardActions>
               </CardActionArea>
             </Card>
-            <Card className={classes.cardContainer} raised={true}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  alt="BeachMe"
-                  height="200"
-                  image={BeachMe}
-                />
-
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    Beach-Me! - Find the closest beaches along with weather
-                    forecasts
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    My solo capstone project. The idea came out of necessity,
-                    finding myself wanting to find the closest beaches with
-                    weather forecasts for them in one single app. This is a
-                    full-stack project with the front-end client build in React
-                    with Redux state management. The client communicates via a
-                    seperately hosted Express back-end server with a Node.js self-styled web-API interfacing with a MongoDB
-                    database storing hundreds of beaches, as well as Google and OpenWeatherMap's external API's. I really learned a LOT
-                    about fullstack architecture in month I spent building BeachMe.
-                    Originally it was a front-end only React app, but I decided
-                    to refactor all of the logic and external API calls to the
-                    Express server leaving the client as 'dumb' as possible. I'm
-                    quite proud at the final outcome, and it has the ability to
-                    be scaled to feature new options like finding lodging.
-                    Recently 'ported' to a React-Native coded App.
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button
-                    size="small"
-                    color="primary"
-                    onClick={(event) =>
-                      window.open(
-                        "https://github.com/stall84/BEACH-ME-V2",
-                        "_blank"
-                      )
-                    }
-                  >
-                    Client Code
-                  </Button>
-                  <Button
-                    size="small"
-                    color="primary"
-                    onClick={(event) =>
-                      window.open(
-                        "https://github.com/stall84/Beach-Me-Backend",
-                        "_blank"
-                      )
-                    }
-                  >
-                    Server Code
-                  </Button>
-                  <Button
-                    size="small"
-                    color="primary"
-                    onClick={(event) =>
-                      window.open("https://beach-me-v2.vercel.app/", "_blank")
-                    }
-                  >
-                    Live Site
-                  </Button>
-                  <Button
-                    size="small"
-                    color="primary"
-                    onClick={(event) =>
-                      window.open(
-                        "https://github.com/stall84/Beach_Me_NativeApp/",
-                        "_blank"
-                      )
-                    }
-                  >
-                    React-Native Code
-                  </Button>
-                  <Button
-                    size="small"
-                    color="primary"
-                    onClick={(event) =>
-                      window.open(
-                        "https://expo.io/@stall84/Beach_Me_App_exp/",
-                        "_blank"
-                      )
-                    }
-                  >
-                    React-Native App (Requires Expo-Client)
-                  </Button>
-                </CardActions>
-              </CardActionArea>
-            </Card>
+            
             <Card className={classes.cardContainer} raised={true}>
               <CardActionArea>
                 <CardMedia

@@ -100,8 +100,6 @@ const useStyles = makeStyles({
     marginTop: "1.2rem",
     marginLeft: "1.65rem",
     marginRight: "1.65rem",
-    textShadow:
-      "1px 1px 4px rgba(255, 0, 0, 0.95), -1px -1px 4px rgba(0, 191, 255, 0.95)",
     color: "white",
   },
 });
