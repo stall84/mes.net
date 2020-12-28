@@ -55,7 +55,7 @@ export default function Header() {
               <Typed
                 loop={false}
                 strings={[
-                  "Web/software developer - Atlanta, GA. Possessing passion for all things grand, like the Hubble deep-field image here. Catering curiosity of all things fundamental in nature, like the analog and digital processes we wield to create websites like this. What I do know, I try to apply best. What I don't yet know, I long to one day.",
+                  "Web/software developer - Atlanta, GA. Passionately in pursuit of personal and professional growth. Catering curiosity of all things fundamental in nature, like the analog and digital processes we wield to create websites like this. What I do know, I try to apply best. What I don't yet know, I long to one day.",
                 ]}
                 typeSpeed={18}
               />
@@ -68,7 +68,7 @@ export default function Header() {
               <Typed
                 loop={false}
                 strings={[
-                  "Web/software developer - Atlanta, GA. Possessing passion for all things grand, like the Hubble deep-field image here. Catering curiosity of all things fundamental in nature, like the analog and digital processes we wield to create websites like this. What I do know, I try to apply best. What I don't yet know, I long to one day.",
+                  "Web/software developer - Atlanta, GA. Passionately in pursuit of personal and professional growth. Catering curiosity of all things fundamental in nature, like the analog and digital processes we wield to create websites like this. What I do know, I try to apply best. What I don't yet know, I long to one day.",
                 ]}
                 typeSpeed={18}
               />
