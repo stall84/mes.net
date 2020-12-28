@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Avatar, Box } from "@material-ui/core";
+import { Typography, Avatar, Box, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Typed from "react-typed";
 import MediaQuery from "react-responsive";
@@ -11,8 +11,8 @@ export default function Header() {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
-      <Box className={classes.mainContainer}>
+    <React.Fragment> 
+      <Box className={classes.mainContainer}>      
         <Avatar
           className={classes.avatar}
           src={mesAvatar4}
@@ -32,42 +32,48 @@ export default function Header() {
           <Typed
             loop
             strings={[
-              "Web Developer",
-              "MERN/SERN Stack",
-              "ES6-Javascript",
-              "Web-API Architecture",
-              "ReactJS",
-              "React Native",
-              "SQL/NoSQL",
+              "Developer",
+              "Full / Multi-Stack",
+              "Javascript ❤",
+              "HTML-5 / CSS-3 / Multiparadigm Styling",
+              "React ❤",
+              "Vue",
+              "Salesforce Developer / Admin",
+              "Apex ≈ Java",
+              "SQL/NoSQL DB's",
               ".NET/C#",
-              "Astronomy/Astrophotography",
-              "Aviation",
+              "Astronomy / Astrophotography ❤",
+              "Aviation ❤ - Commercial Pilot",
             ]}
-            typeSpeed={60}
-            backSpeed={60}
+            typeSpeed={64}
+            backSpeed={40}
           />
         </Typography>
         <MediaQuery minDeviceWidth={1200}>
-          <Typography className={classes.aboutSubTitle} variant="h6">
-            <Typed
-              loop={false}
-              strings={[
-                "Web/software developer - Atlanta, GA. Possessing passion for all things grand, like the Hubble deep-field image here. Catering curiosity of all things fundamental in nature, like the analog and digital processes we wield to create websites like this. What I do know, I try to apply best. What I don't yet know, I long to one day.",
-              ]}
-              typeSpeed={20}
-            />
-          </Typography>
+          <Grid container>
+            <Typography className={classes.aboutSubTitle} variant="h6">
+              <Typed
+                loop={false}
+                strings={[
+                  "Web/software developer - Atlanta, GA. Possessing passion for all things grand, like the Hubble deep-field image here. Catering curiosity of all things fundamental in nature, like the analog and digital processes we wield to create websites like this. What I do know, I try to apply best. What I don't yet know, I long to one day.",
+                ]}
+                typeSpeed={18}
+              />
+            </Typography>
+          </Grid>
         </MediaQuery>
         <MediaQuery maxDeviceWidth={1200}>
-          <Typography className={classes.aboutSubTitle} variant="h8">
-            <Typed
-              loop={false}
-              strings={[
-                "Web/software developer - Atlanta, GA. Possessing passion for all things grand, like the Hubble deep-field image here. Catering curiosity of all things fundamental in nature, like the analog and digital processes we wield to create websites like this. What I do know, I try to apply best. What I don't yet know, I long to one day.",
-              ]}
-              typeSpeed={20}
-            />
-          </Typography>
+          <Grid container>
+            <Typography className={classes.aboutSubTitle} variant="h8">
+              <Typed
+                loop={false}
+                strings={[
+                  "Web/software developer - Atlanta, GA. Possessing passion for all things grand, like the Hubble deep-field image here. Catering curiosity of all things fundamental in nature, like the analog and digital processes we wield to create websites like this. What I do know, I try to apply best. What I don't yet know, I long to one day.",
+                ]}
+                typeSpeed={18}
+              />
+            </Typography>
+          </Grid>
         </MediaQuery>
       </Box>
     </React.Fragment>
