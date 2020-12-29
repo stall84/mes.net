@@ -42,7 +42,6 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
   },
   particlesCanvas: {
-    opacity: 0.45,
     position: "absolute",
   },
   logoContainer: {

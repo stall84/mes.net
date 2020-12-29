@@ -28,7 +28,6 @@ const useStyles = makeStyles({
     border: "3px solid #f50057",
   },
   particlesCanvas: {
-    opacity: 0.45,
     position: "absolute",
   },
 });

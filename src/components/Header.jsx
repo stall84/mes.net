@@ -20,7 +20,7 @@ export default function Header() {
           alt="Michael in Marin"
         />
 
-        <Typography className={classes.title} variant="h4">
+        <Typography className={classes.title} variant="h3">
           <Typed
             strings={["Michael Stallings"]}
             typeSpeed={70}
@@ -28,22 +28,22 @@ export default function Header() {
           />
         </Typography>
 
-        <Typography className={classes.subTitle} variant="h5">
+        <Typography className={classes.subTitle} variant="h4">
           <Typed
             loop
             strings={[
               "Developer",
-              "Full / Multi-Stack",
-              "Javascript ❤",
-              "HTML-5 / CSS-3 / Multiparadigm Styling",
-              "React ❤",
+              "Multi-Stack",
+              "Javascript",
+              "HTML5 / CSS3",
+              "React",
               "Vue",
-              "Salesforce Developer / Admin",
-              "Apex ≈ Java",
-              "SQL/NoSQL DB's",
+              "Salesforce Dev",
+              "OOP",
+              "SQL/NoSQL",
               ".NET/C#",
-              "Astronomy / Astrophotography ❤",
-              "Aviation ❤ - Commercial Pilot",
+              "Astronomy",
+              "Aviation",
             ]}
             typeSpeed={64}
             backSpeed={40}
@@ -51,11 +51,11 @@ export default function Header() {
         </Typography>
         <MediaQuery minDeviceWidth={1200}>
           <Grid container>
-            <Typography className={classes.aboutSubTitle} variant="h6">
+            <Typography className={classes.aboutSubTitle} variant="h5">
               <Typed
                 loop={false}
                 strings={[
-                  "Web/software developer - Atlanta, GA. Passionately in pursuit of personal and professional growth. Catering curiosity of all things fundamental in nature, like the analog and digital processes we wield to create websites like this. What I do know, I try to apply best. What I don't yet know, I long to one day.",
+                  "Web/software developer - Atlanta, GA. Passionately in pursuit of personal and professional growth. Catering a curiosity of all things fundamental in nature, like the analog and digital processes we wield to create websites like this. What I do know, I try my best to apply. What I don't yet know, I long to one day.",
                 ]}
                 typeSpeed={18}
               />
@@ -64,11 +64,11 @@ export default function Header() {
         </MediaQuery>
         <MediaQuery maxDeviceWidth={1200}>
           <Grid container>
-            <Typography className={classes.aboutSubTitle} variant="h8">
+            <Typography className={classes.aboutSubTitle} variant="h7">
               <Typed
                 loop={false}
                 strings={[
-                  "Web/software developer - Atlanta, GA. Passionately in pursuit of personal and professional growth. Catering curiosity of all things fundamental in nature, like the analog and digital processes we wield to create websites like this. What I do know, I try to apply best. What I don't yet know, I long to one day.",
+                  "Web/software developer - Atlanta, GA. Passionately in pursuit of personal and professional growth. Catering a curiosity of all things fundamental in nature, like the analog and digital processes we wield to create websites like this. What I do know, I try my best to apply. What I don't yet know, I long to one day.",
                 ]}
                 typeSpeed={18}
               />
@@ -91,21 +91,26 @@ const useStyles = makeStyles({
     zIndex: 1,
   },
   avatar: {
-    width: "10rem",
-    height: "10rem",
+    width: "12rem",
+    height: "12rem",
     margin: "0 auto",
   },
   title: {
+    fontFamily: "KanitMed",
     color: "#f50057",
-    textShadow: "0 0 1px white",
+    textShadow: "-0.8px -0.8px #000, 0.8px -0.8px #000, -0.8px 0.8px #000, 0.8px 0.8px #000",
   },
   subTitle: {
+    fontFamily: "MontserratMed",
     color: "tan",
+    textShadow: "-0.8px -0.8px #000, 0.8px -0.8px #000, -0.8px 0.8px #000, 0.8px 0.8px #000"
   },
   aboutSubTitle: {
+    fontFamily: "KanitMed",
     marginTop: "1.2rem",
     marginLeft: "1.65rem",
     marginRight: "1.65rem",
-    color: "white",
+    color: "#f9f4ef",
+    textShadow: "-0.8px -0.8px #000, 0.8px -0.8px #000, -0.8px 0.8px #000, 0.8px 0.8px #000"
   },
 });
