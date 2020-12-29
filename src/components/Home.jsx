@@ -7,7 +7,6 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   particlesCanvas: {
-    opacity: 0.45,
     position: "absolute",
   },
 });
@@ -24,60 +23,33 @@ export default function Home() {
         params={{
           particles: {
             number: {
+              value: 62,
               density: {
                 enable: true,
-                value_area: 700,
-              },
-              value: 65,
+                value_area: 1500,
+              }       
             },
-          },
-          interactivity: {
-            detectsOn: "canvas",
-            events: {
-              onHover: {
-                enable: true,
-                mode: "repulse",
-              },
-              resize: true,
+            lineLinked: {
+              enable: true,
+              opacity: 0.02
             },
-            modes: {
-              push: {
-                quantity: 10,
-              },
-              repulse: {
-                distance: 92,
-                duration: 2.5,
-              },
-            },
-            shape: {
-              type: "circle",
-              stroke: {
-                width: 60,
-                color: "tomato",
-              },
+            move: {
+              direction: "right",
+              speed: 0.15
             },
             size: {
-              value: 8,
-              random: true,
-              animation: {
-                enable: true,
-                speed: 4,
-                size_min: 2,
-                sync: true,
-              },
+              value: 3.5
             },
             opacity: {
-              value: 10,
-              random: true,
               anim: {
                 enable: true,
-                speed: 5,
-                opacity_min: 5,
-                sync: false,
-              },
-            },
-            fpsLimit: 60,
+                speed: 1,
+                opacity_min: 0.85
+              }
+            }
           },
+          fpsLimit: 30,
+          retina_detect: true,
         }}
       ></Particles>
       <Footer />
