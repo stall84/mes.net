@@ -86,7 +86,7 @@ export default function Portfolio() {
 
                 <CardContent>
                   <Typography gutterBottom variant="h5">
-                    Beach-Me! - Find the closest beaches along with weather
+                    Beach-Me! - Find the closest beaches with weather
                     forecasts
                   </Typography>
                   <Typography
@@ -94,7 +94,20 @@ export default function Portfolio() {
                     color="textSecondary"
                     component="p"
                   >
-                    Update: v3 Live:  I decided to take the entire project offline for a complete overhaul and restyle.
+                    <span><strong><em>iOS Mobile-App:</em></strong></span>
+                    <br/>
+                       Beach-Me iOS App published to Apple AppStore. Built in React-Native using a 'manual' react-native-CLI build process (not Expo).
+                       The mobile-app actually has some key differences to the web-app currently (that might change with a later revision to the web-app): One of the 
+                       bigger differences is the use of Redux-Thunk middleware to structure the incoming/outgoing API calls. 
+                       I'm really excited to begin planning and building subsequent release versions of the mobile app because mobile is the domain the original 
+                       idea made sense most in. For example, food, lodging, landmarks, favorite rest-stops, etc. can be integrated if I decide to have a user-database later on.
+                       Privacy concerns became highly prominent in this build phase, Apple has very strict rules on how to obtain, and communicate what data you get from the user. The 
+                       building the of the "app-production-structures" (like the custom privacy policy, app-support capability, etc) around the app was a valuable learning experience. 
+                    <br/>
+                    <br/>
+                    <span><strong><em>Web App Version 3:</em></strong></span>
+                    <br />
+                    I decided to take the entire project offline for a complete overhaul and restyle.
                     I converted all of my component classes over to React functional components using Hooks where needed. However the 
                     vast majority of the state management is handled by Redux again, this time using React-Redux Hooks.  This refactor 
                     led to a major reduction in the total codebase along with making future alterations much simpler. The 2nd and maybe most apprciable of the 
@@ -106,7 +119,9 @@ export default function Portfolio() {
                     I spent a great deal of the rebuild time on learning the ins-and-outs of Web Pack, how to build custom configurations for production and development, and the many
                     ways of code-splitting and other optimizations a manual-bundle with Web Pack offers. Quite a rewarding experience all-in-all. 
                     <br />
-                    Original: 
+                    <br />
+                    <span><strong><em>Web App Version 2 (original full-stack build):</em></strong></span>
+                    <br />
                     My solo capstone project. The idea came out of necessity,
                     finding myself wanting to find the closest beaches with
                     weather forecasts for them in one single app. This is a
@@ -119,8 +134,8 @@ export default function Portfolio() {
                     to refactor all of the logic and external API calls to the
                     Express server leaving the client as 'dumb' as possible. I'm
                     quite proud at the final outcome, and it has the ability to
-                    be scaled to feature new options like finding lodging.
-                    Recently 'ported' to a React-Native coded App.
+                    be scaled to feature new options like finding lodging and/or a user database where they can store their favorite beach locations, etc.
+
                   </Typography>
                 </CardContent>
                 <CardActions>
@@ -146,7 +161,7 @@ export default function Portfolio() {
                       )
                     }
                   >
-                    Server Code
+                    API Code
                   </Button>
                   <Button
                     size="small"
@@ -155,14 +170,14 @@ export default function Portfolio() {
                       window.open("https://beach-me.app/", "_blank")
                     }
                   >
-                    Live Site
+                    Web App
                   </Button>
                   <Button
                     size="small"
                     color="primary"
                     onClick={(event) =>
                       window.open(
-                        "https://github.com/stall84/Beach_Me_NativeApp/",
+                        "https://github.com/stall84/Beach-Me-Native_2",
                         "_blank"
                       )
                     }
@@ -174,12 +189,75 @@ export default function Portfolio() {
                     color="primary"
                     onClick={(event) =>
                       window.open(
-                        "https://expo.io/@stall84/Beach_Me_App_exp/",
+                        "https://apps.apple.com/us/app/beach-me/id1550111854",
                         "_blank"
                       )
                     }
                   >
-                    React-Native App (Requires Expo-Client)
+                    iOS App (Apple AppStore)
+                  </Button>
+                </CardActions>
+              </CardActionArea>
+            </Card>
+            
+            <Card className={classes.cardContainer} raised={true}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  alt="GymTanLaundry"
+                  height="200"
+                  image={GymTanLaundry}
+                />
+
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    Gym, Tan, Laundry: Custom Spotify Playlist Creation App
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    My first group project where I served as team lead. The idea
+                    came out of an idea I had to provide a genre-narrowed
+                    Spotify playlist-creator for users. The web-app itself was quite the task to finish in the 13 days
+                    we had alloted to us. The app is server-side-rendered, with a NodeJS API hosted on a Heroku dyno. 
+                    Coding out the user authentication of the app was definitely the most rich learning experience in the whole project from a 
+                    purely coding angle. We used PassportJS which is an excellent NPM package to handle the communication between our users and Spotify's authentication
+                    API. Our team member Donald took the brunt of the authentication coding. We do have a SQL database up and running on the Heroku dyno, but as 
+                    yet we don't have any functioning user-storage to our database, as that was a 
+                    'wish-list' item for future revisions/releases. This is definitely an awesome app once you try it out. The user picks the size of the playlist they want us
+                    to create for them, then they pic either 'Gym', 'Tan', or 'Laundry' which corelate with upbeat/energetic, relaxing/mellow, or 
+                    focussed/serious musical genres respectively. Our team member Cassie came up with an ingenious, but simple algorithm that randomly selects tracks 
+                    based on those parameters using Spotify's built-in metrics. Then the user logs-in with their spotify credentials, and can save the newly created playlist to their account.
+                    The major experience for me on this project came from being the team leader: Having to
+                    make decisions on priorities, project scope, task assignment, code review, code assimilation, and the ever-nearing, dreaded deadline.
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button
+                    size="small"
+                    color="primary"
+                    onClick={(event) =>
+                      window.open(
+                        "https://github.com/digitalcrafts-atl/Gym-Tan-Laundry",
+                        "_blank"
+                      )
+                    }
+                  >
+                    Code
+                  </Button>
+                  <Button
+                    size="small"
+                    color="primary"
+                    onClick={(event) =>
+                      window.open(
+                        "https://gym-tan-laundry.herokuapp.com/",
+                        "_blank"
+                      )
+                    }
+                  >
+                    Live Site
                   </Button>
                 </CardActions>
               </CardActionArea>
@@ -239,63 +317,6 @@ export default function Portfolio() {
                     color="primary"
                     onClick={(event) =>
                       window.open("https://isifr.azurewebsites.net/", "_blank")
-                    }
-                  >
-                    Live Site
-                  </Button>
-                </CardActions>
-              </CardActionArea>
-            </Card>
-            
-            <Card className={classes.cardContainer} raised={true}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  alt="GymTanLaundry"
-                  height="200"
-                  image={GymTanLaundry}
-                />
-
-                <CardContent>
-                  <Typography gutterBottom variant="h5">
-                    Gym, Tan, Laundry: Custom Spotify Playlist Creation App
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    My first group project where I served as team lead. The idea
-                    came out of an idea I had to provide a genre-narrowed
-                    playlist creator for users. While the App itself was
-                    complex, being largely server-side rendered, and
-                    authentication taking a serious amount of time and code, the
-                    major experience came from being the team leader: Having to
-                    make decisions on priorities, project scope, task assignment
-                    and the ever-nearing deadline.
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button
-                    size="small"
-                    color="primary"
-                    onClick={(event) =>
-                      window.open(
-                        "https://github.com/digitalcrafts-atl/Gym-Tan-Laundry",
-                        "_blank"
-                      )
-                    }
-                  >
-                    Code
-                  </Button>
-                  <Button
-                    size="small"
-                    color="primary"
-                    onClick={(event) =>
-                      window.open(
-                        "https://gym-tan-laundry.herokuapp.com/",
-                        "_blank"
-                      )
                     }
                   >
                     Live Site
