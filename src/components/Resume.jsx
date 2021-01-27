@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 import { Button, Grid, Tooltip } from "@material-ui/core";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import MediaQuery from "react-responsive";
@@ -34,7 +35,7 @@ import vue from "../images/icons/vue-log.png"
 
 const useStyles = makeStyles((theme) => ({
   buttonGrid: {
-    marginTop: "2.5rem",
+    marginTop: "4.5rem",
   },
   button: {
     textDecoration: "none",
@@ -217,7 +218,7 @@ export default function Resume() {
           />
           <Icon
             title="React Native in my code ->"
-            href="https://github.com/stall84/Beach_Me_NativeApp/blob/8efeb9872cf65045bc0596f90617b70dc5682df5/screens/Display.js#L1-L111"
+            href="https://github.com/stall84/Beach-Me-Native_2/blob/112eeae20c165ab43bf6796fab4dcde1a0164d6f/screens/MainScreen.js#L1-L227"
             icon={reactNativeLogo}
             alt="reactNativeLogo"
           />
@@ -331,6 +332,7 @@ export default function Resume() {
           />
         </Grid>
       </Grid>
+      <Footer />
     </React.Fragment>
   );
 }
