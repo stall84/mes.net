@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Typography, Avatar, Box, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Typed from "react-typed";
@@ -8,7 +8,19 @@ import mesAvatar4 from "../images/mesAvatar4.jpg";
 // Define Styles using Material UI's makeStyles Hook
 
 export default function Header() {
+  const [ sanityHeroData, setSanityHeroData ] = useState();
+
   const classes = useStyles();
+
+  useEffect(() => {
+    async function fetchData() {
+      let response = await fetch('https://idgyj10l.api.sanity.io/v2021-10-21/data/query/production/?query=*[_type == "heroContent"]');
+      response.json()
+      .then(({result}) => setSanityHeroData(result[0]))
+      .catch((error) => console.log(error))
+    }
+    fetchData();
+  },[])
 
   return (
     <React.Fragment> 
