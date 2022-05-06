@@ -10,8 +10,9 @@ export default {
     },
     {
       name: "techStack",
-      type: "string",
+      type: "array",
       title: "Tech Stack (List)",
+      of: [{ type: "string" }],
     },
     {
       name: "introParagraph",
