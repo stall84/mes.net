@@ -8,7 +8,7 @@ import mesAvatar4 from "../images/mesAvatar4.jpg";
 // Define Styles using Material UI's makeStyles Hook
 
 export default function Header() {
-  const [ sanityHeroData, setSanityHeroData ] = useState();
+  const [ sanityHeroData, setSanityHeroData ] = useState({});
 
   const classes = useStyles();
 
@@ -31,62 +31,58 @@ export default function Header() {
           title="MES in Marin"
           alt="Michael in Marin"
         />
-
-        <Typography className={classes.title} variant="h3">
-          <Typed
-            strings={["Michael Stallings"]}
-            typeSpeed={70}
-            showCursor={false}
-          />
-        </Typography>
-
-        <Typography className={classes.subTitle} variant="h4">
-          <Typed
-            loop
-            strings={[
-              "Developer",
-              "Multi-Stack",
-              "Javascript",
-              "HTML5 / CSS3",
-              "React",
-              "Vue",
-              "Salesforce Dev",
-              "OOP",
-              "SQL/NoSQL",
-              ".NET/C#",
-              "Astronomy",
-              "Aviation",
-            ]}
-            typeSpeed={64}
-            backSpeed={40}
-          />
-        </Typography>
-        <MediaQuery minDeviceWidth={1200}>
-          <Grid container>
-            <Typography className={classes.aboutSubTitle} variant="h5">
+        { sanityHeroData.nameBanner !== undefined ? ( 
+          <React.Fragment>
+            <Typography 
+              className={classes.title} 
+              variant="h3">
               <Typed
-                loop={false}
-                strings={[
-                  "Web/software developer - Atlanta, GA. Passionately in pursuit of personal and professional growth. Catering a curiosity of all things fundamental in nature, like the analog and digital processes we wield to create websites like this. What I do know, I try my best to apply. What I don't yet know, I long to one day.",
-                ]}
-                typeSpeed={18}
+                strings={[sanityHeroData.nameBanner]}
+                typeSpeed={70}
+                showCursor={false}
               />
             </Typography>
-          </Grid>
-        </MediaQuery>
-        <MediaQuery maxDeviceWidth={1200}>
-          <Grid container>
-            <Typography className={classes.aboutSubTitle} variant="h7">
-              <Typed
-                loop={false}
-                strings={[
-                  "Web/software developer - Atlanta, GA. Passionately in pursuit of personal and professional growth. Catering a curiosity of all things fundamental in nature, like the analog and digital processes we wield to create websites like this. What I do know, I try my best to apply. What I don't yet know, I long to one day.",
-                ]}
-                typeSpeed={18}
-              />
+            <Typography className={classes.subTitle} variant="h4">
+            <Typed
+              loop
+              strings={
+                sanityHeroData.techStack.map((ele) => ele)
+              }
+              typeSpeed={64}
+              backSpeed={40}
+            />
             </Typography>
-          </Grid>
-        </MediaQuery>
+            <MediaQuery minDeviceWidth={1200}>
+              <Grid container>
+                <Typography className={classes.aboutSubTitle} variant="h5">
+                  <Typed
+                    loop={false}
+                    strings={[
+                      sanityHeroData.introParagraph
+                    ]}
+                    typeSpeed={18}
+                  />
+                </Typography>
+              </Grid>
+            </MediaQuery>
+            <MediaQuery maxDeviceWidth={1200}>
+              <Grid container>
+                <Typography className={classes.aboutSubTitle} variant="h7">
+                  <Typed
+                    loop={false}
+                    strings={[
+                      sanityHeroData.introParagraph
+                    ]}
+                    typeSpeed={18}
+                  />
+                </Typography>
+              </Grid>
+            </MediaQuery>
+        </React.Fragment>
+        ) : ( 
+        <h1>LOADING...</h1> 
+        ) 
+        }
       </Box>
     </React.Fragment>
   );
