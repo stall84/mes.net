@@ -32,16 +32,15 @@ export default function Header() {
           <Typed
             loop
             strings={[
-              "Developer",
+              "Software Engineer",
               "Multi-Stack",
-              "Javascript",
-              "HTML5 / CSS3",
+              "Typescript",
+              "Markup/Stlying",
               "React",
-              "Vue",
-              "Salesforce Dev",
               "OOP",
               "SQL/NoSQL",
-              ".NET/C#",
+              "AWS",
+              "Service-Architecture",
               "Astronomy",
               "Aviation",
             ]}
@@ -55,7 +54,7 @@ export default function Header() {
               <Typed
                 loop={false}
                 strings={[
-                  "Web/software developer - Atlanta, GA. Passionately in pursuit of personal and professional growth. Catering a curiosity of all things fundamental in nature, like the analog and digital processes we wield to create websites like this. What I do know, I try my best to apply. What I don't yet know, I long to one day.",
+                  "Software Engineer - Atlanta, GA. Passionately in pursuit of personal and professional growth. Catering a curiosity of all things fundamental in nature, like the analog and digital processes we wield to create websites like this. What I do know, I try my best to apply. What I don't yet know, I long to one day.",
                 ]}
                 typeSpeed={18}
               />
@@ -68,7 +67,7 @@ export default function Header() {
               <Typed
                 loop={false}
                 strings={[
-                  "Web/software developer - Atlanta, GA. Passionately in pursuit of personal and professional growth. Catering a curiosity of all things fundamental in nature, like the analog and digital processes we wield to create websites like this. What I do know, I try my best to apply. What I don't yet know, I long to one day.",
+                  "Software Engineer - Atlanta, GA. Passionately in pursuit of personal and professional growth. Catering a curiosity of all things fundamental in nature, like the analog and digital processes we wield to create websites like this. What I do know, I try my best to apply. What I don't yet know, I long to one day.",
                 ]}
                 typeSpeed={18}
               />
