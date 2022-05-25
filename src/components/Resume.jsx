@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import { Button, Grid, Tooltip } from "@material-ui/core";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import MediaQuery from "react-responsive";
-import PDF from "../docs/Resume_6.1.pdf";
+import PDF from "../docs/Resume_6.2.pdf";
 import Particles from "react-particles-js";
 import aspLogo from "../images/icons/asp-log.png";
 import csharpLogo from "../images/icons/csharp-log.png";
