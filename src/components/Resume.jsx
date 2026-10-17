@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import { Button, Grid, Tooltip } from "@material-ui/core";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import MediaQuery from "react-responsive";
-import PDF from "../docs/Resume_6.2.pdf";
+
 import Particles from "react-particles-js";
 import aspLogo from "../images/icons/asp-log.png";
 import csharpLogo from "../images/icons/csharp-log.png";
@@ -64,7 +64,7 @@ const PdfButton = (props) => {
   const classes = useStyles();
   return (
     <CustomTooltip title="My Current Resume">
-      <Button {...props} className={classes.button} href={PDF}>
+      <Button {...props} className={classes.button}>
         Open PDF Resume
       </Button>
     </CustomTooltip>
@@ -134,7 +134,7 @@ export default function Resume() {
         alignItems="center"
         alignContent="center"
       >
-        <PdfButton />
+        <h1>Contact me on LinkedIn for most recent CV/Resume</h1>
       </Grid>
       <Particles
         canvasClassName={classes.particlesCanvas}
