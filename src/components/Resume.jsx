@@ -60,16 +60,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const PdfButton = (props) => {
-  const classes = useStyles();
-  return (
-    <CustomTooltip title="My Current Resume">
-      <Button {...props} className={classes.button}>
-        Open PDF Resume
-      </Button>
-    </CustomTooltip>
-  );
-};
+// const PdfButton = (props) => {
+//   const classes = useStyles();
+//   return (
+//     <CustomTooltip title="My Current Resume">
+//       <Button {...props} className={classes.button}>
+//         Open PDF Resume
+//       </Button>
+//     </CustomTooltip>
+//   );
+// };
 
 const Icon = (props) => {
   const classes = useStyles();
