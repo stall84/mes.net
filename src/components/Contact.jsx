@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 //import { Link } from "react-router-dom";
-import Particles from "react-particles-js";
+import Particles from "./Particles";
 import {
   Grid,
   FormControl,
@@ -10,13 +10,10 @@ import {
   FilledInput,
   InputLabel,
   InputAdornment,
-} from "@material-ui/core/";
-import { AccountCircle } from "@material-ui/icons";
-import {
-  makeStyles,
-  createMuiTheme,
-  ThemeProvider,
-} from "@material-ui/core/styles";
+} from "@mui/material";
+import { AccountCircle } from "@mui/icons-material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
   particlesCanvas: {
@@ -40,9 +37,9 @@ const useStyles = makeStyles((theme) => ({
   inputIcons: {},
 }));
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
-    type: "dark",
+    mode: "dark",
   },
 });
 

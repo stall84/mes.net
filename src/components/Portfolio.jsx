@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@mui/styles";
 import {
   Box,
   Grid,
@@ -11,12 +11,12 @@ import {
   CardMedia,
   Button,
   Typography,
-} from "@material-ui/core";
+} from "@mui/material";
 import ClearDarkSky from "../images/ClearDarkSky.png";
 import GymTanLaundry from "../images/GTL.png";
 import BeachMe from "../images/beach-me-1100.jpg";
 import isIFR from "../images/isIFR.png";
-import Particles from "react-particles-js";
+import Particles from "./Particles";
 
 const useStyles = makeStyles({
   mainContainer: {

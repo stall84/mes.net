@@ -1,7 +1,7 @@
 import React from "react";
-import { Typography, Avatar, Box, Grid } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import Typed from "react-typed";
+import { Typography, Avatar, Box, Grid } from "@mui/material";
+import { makeStyles } from "@mui/styles";
+import { ReactTyped as Typed } from "react-typed";
 import MediaQuery from "react-responsive";
 import mesAvatar4 from "../images/mesAvatar4.jpg";
 

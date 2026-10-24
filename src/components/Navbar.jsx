@@ -13,15 +13,15 @@ import {
   List,
   Typography,
   Box,
-} from "@material-ui/core";
+} from "@mui/material";
 import {
   FlightTakeoff,
   AssignmentInd,
   Home,
   Apps,
   //ContactMail,
-} from "@material-ui/icons";
-import { makeStyles } from "@material-ui/styles";
+} from "@mui/icons-material";
+import { makeStyles } from "@mui/styles";
 import Uranus from "../images/uranus3.png";
 
 // Define Styles using Material UI's makeStyles hook

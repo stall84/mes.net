@@ -2,8 +2,8 @@ import React from "react";
 import Navbar from "./Navbar";
 import Header from "./Header";
 import Footer from "./Footer";
-import Particles from "react-particles-js";
-import { makeStyles } from "@material-ui/core/styles";
+import Particles from "./Particles";
+import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
   particlesCanvas: {

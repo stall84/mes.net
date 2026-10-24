@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 
 /*** Components ***/
@@ -8,8 +8,8 @@ import Resume from "./components/Resume";
 import Portfolio from "./components/Portfolio";
 
 /*** Material-UI Theming ***/
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import { CssBaseline } from '@material-ui/core';
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { CssBaseline } from '@mui/material';
 
 /*** Fonts ***/
 import NunitoBold from './fonts/NunitoSans-SemiBold.ttf';
@@ -39,13 +39,13 @@ const montserratMed = {
 };
 
 
-const theme = createMuiTheme({
+const theme = createTheme({
   typography: {
     fontFamily: 'NunitoBold, MontserratMed, KanitMed, Arial',
   },
-  overrides: {
+  components: {
     MuiCssBaseline: {
-      '@global': {
+      styleOverrides: {
         '@font-face': [nunitoBold, kanitMed, montserratMed],
       },
     },
@@ -57,9 +57,11 @@ export default function App() {
     <React.Fragment>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-          <Route exact path="/" component={Home} />
-          <Route exact path="/resume" component={Resume} />
-          <Route exact path="/portfolio" component={Portfolio} />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+          </Routes>
       </ThemeProvider>
     </React.Fragment>
   );

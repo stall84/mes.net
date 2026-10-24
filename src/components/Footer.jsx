@@ -1,9 +1,9 @@
 import React from "react";
-import { Grid, Tooltip } from "@material-ui/core";
-import { withStyles, makeStyles } from "@material-ui/core/styles";
+import { Grid, Tooltip } from "@mui/material";
+import { withStyles, makeStyles } from "@mui/styles";
 import styled from "styled-components";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const useStyles = makeStyles({
   root: {
